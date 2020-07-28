@@ -1,6 +1,8 @@
 <main role="main" class="container">
     <div class="jumbotron">
-        <h1>Coding Solution for ZainCash Test</h1>
-        <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+        <h1>ZainCash Test - Solution Presentation</h1>
+        <p class="lead">
+            The website is an implementation of the technical solution to the tasks/problems of ZainCash employment Test.
+        </p>
     </div>
 </main>
