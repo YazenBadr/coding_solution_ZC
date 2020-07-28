@@ -11,7 +11,7 @@
         const form_submit_btn = form_element.find('button.btn')
 
         $.ajax({
-            url: '{{route('file_organizer_uploader')}}',
+            url: '{{route('coding_task_upload')}}',
             type: 'POST',
             data: form_data,
             beforeSend:function(){

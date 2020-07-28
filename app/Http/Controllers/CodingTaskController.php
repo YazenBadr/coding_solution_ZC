@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FileOrganizerController extends Controller
+class CodingTaskController extends Controller
 {
     /**
      * Function: used by the router to return file organizer view
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function get_file_organizer_view (){
-        return view('file-organizer.main');
+    public function get_coding_task_view (){
+        return view('coding-task.main');
     }
 
     /**
@@ -19,13 +19,13 @@ class FileOrganizerController extends Controller
      * @param Request $request
      * @return array|string
      */
-    public function process_file_organizer_upload(Request $request){
+    public function process_coding_task_upload(Request $request){
         //check file input existence
         if($request->hasFile('employees_data_file')){
             //process file content
-            if($json_data = self::read_file_organizer_uploaded_file($request->file('employees_data_file')->getRealPath())){
+            if($json_data = self::read_coding_task_uploaded_file($request->file('employees_data_file')->getRealPath())){
                 //generate report
-                return self::generate_file_organizer_report($json_data);
+                return self::generate_coding_task_report($json_data);
             }
         }
         return 'The file seems either corrupted or empty !';
@@ -36,7 +36,7 @@ class FileOrganizerController extends Controller
      * @param $file_location
      * @return mixed|null
      */
-    private static function read_file_organizer_uploaded_file($file_location){
+    private static function read_coding_task_uploaded_file($file_location){
         //access and read file content
         if($file_content_raw =  file_get_contents($file_location)){
             //json-decode file content
@@ -50,9 +50,9 @@ class FileOrganizerController extends Controller
     /**
      * Function: used to prepare a report in an array format for files names grouped by employees
      * @param $json_data
-     * @return array
+     * @return string
      */
-    private static function generate_file_organizer_report($json_data){
+    private static function generate_coding_task_report($json_data){
         //output array to store files names grouped by employees
         $report = array();
 

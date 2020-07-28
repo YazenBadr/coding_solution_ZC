@@ -12,5 +12,8 @@
 */
 
 Route::get('/', 'HomeController@get_home_view')->name('home');
-Route::get('/file_organizer_solution', 'FileOrganizerController@get_file_organizer_view')->name('file_organizer');
-Route::post('/file_organizer_uploader', 'FileOrganizerController@process_file_organizer_upload')->name('file_organizer_uploader');
+
+Route::get('/coding_task', 'CodingTaskController@get_coding_task_view')->name('coding_task');
+Route::post('/coding_task_upload', 'CodingTaskController@process_coding_task_upload')->name('coding_task_upload');
+
+Route::get('/database_task', 'DatabaseTaskController@get_database_task_view')->name('database_task');

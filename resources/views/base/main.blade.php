@@ -27,7 +27,7 @@
 @include('base.scripts')
 
 <!-- File Organizer Upload JavaScript ================================================== -->
-@include('file-organizer.upload-script')
+@include('coding-task.upload-script')
 
 
 </body>
