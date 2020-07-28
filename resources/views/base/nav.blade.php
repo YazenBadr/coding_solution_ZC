@@ -9,11 +9,11 @@
                 <a class="nav-link" id="home_nav_link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="coding_task_nav_link" href="{{route('coding_task')}}">Coding Problem <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="coding_task_nav_link" href="{{route('coding_task')}}">Coding Task <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="database_task_nav_link" href="{{route("database_task")}}">Database Problem <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="database_task_nav_link" href="{{route("database_task")}}">Database Task <span class="sr-only">(current)</span></a>
             </li>
 
         </ul>
