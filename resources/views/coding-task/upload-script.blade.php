@@ -19,7 +19,7 @@
                 form_submit_btn.attr('disabled','disabled');
             },
             success: function (data) {
-                console.log(JSON.parse(data));
+                //console.log(JSON.parse(data));
 
                 $(form_element)[0].reset();
                 form_spinner.addClass('d-none');
